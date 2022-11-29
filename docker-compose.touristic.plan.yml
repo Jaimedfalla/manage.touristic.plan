@@ -1,0 +1,7 @@
+services:
+
+	vass-touristic-plans-api:
+		image: jaefallac/tourismplan:latest
+		container_name: vass-touristic-plans-api
+		env_file:
+			- 

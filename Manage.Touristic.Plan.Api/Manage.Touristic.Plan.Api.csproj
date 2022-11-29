@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5ace354e-892f-4bfc-b0fe-c7e8efe8e2e5</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	  <DockerfileRunArguments>--name Turistic-api --network-alias Turistic-api</DockerfileRunArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Manage.Touristic.Plan.Application.DTO\Manage.Touristic.Plan.Application.DTO.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Application.Interface\Manage.Touristic.Plan.Application.Interface.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Application.Main\Manage.Touristic.Plan.Application.Main.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Domain.Core\Manage.Touristic.Plan.Domain.Core.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Infraestructure.Repositories\Manage.Touristic.Plan.Infraestructure.Repositories.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Transversal.Common\Manage.Touristic.Plan.Transversal.Common.csproj" />
+    <ProjectReference Include="..\Manage.Touristic.Plan.Transversal.Mapper\Manage.Touristic.Plan.Transversal.Mapper.csproj" />
+  </ItemGroup>
+
+</Project>
