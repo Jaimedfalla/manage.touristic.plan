@@ -4,9 +4,9 @@ To build the image, you must execute this command. Before, you should be located
 
 To run the container, you must use this command
 
-- docker run --name dev-touristic-plan-api -e ConnectionStrings__PSQ_connection="User ID =<user>;Password=<password>;Server=<server>;Port=<port>;Database=VassAgency; Integrated Security=true;Pooling=true;" -p 8080:80 -d jaefallac/tourismplan
+- docker run --name touristic-plan-api -e ConnectionStrings__PSQ_connection="User ID =__\<user\>__;Password=__\<password\>__ ; Server=__\<server\>__;Port=__\<port\>__;Database=__\<database\>__; Integrated Security=true;Pooling=true;" -p 8080:80 -d jaefallac/tourismplan
 
-> Where <user> is user to connect database VassAgency. <password> is user password before mentioned. <port>: Port is listening your postgresql instance. <server>: Server of your instance
+> Where __\<user\>__ is user to connect database VassAgency. __\<password\>__ is user password before mentioned. __\<port\>: Port is listening your postgresql instance. __\<server\>__: Server of your instance
 
 Other commands
 docker run --name postgresql-instance -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=<password> -e POSTGRES_DB=<instance-name> -d postgres
