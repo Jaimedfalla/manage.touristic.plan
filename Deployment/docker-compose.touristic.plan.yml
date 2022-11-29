@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+ instance-pgsql:
+  container_name: 'instance-pgsql'
+  build: ../Database/
+  ports: 
+   - "5432:5432"
+  networks:
+   - travel-agency
+
+ pgadmin:
+  container_name: pgadmin
+  image: dpage/pgadmin4
+  env_file:
+   - pgadmin.env
+  ports: 
+   - "5050:80"
+  networks:
+   - travel-agency
+
+ touristic-plans-api:
+  image: jaefallac/tourismplan:latest
+  container_name: 'touristic-plans-api'
+  env_file:
+   - service.env
+  ports:
+   - "8080:80"
+  networks:
+   - travel-agency
+  depends_on:
+   - instance-pgsql
+
+networks:
+ travel-agency:
