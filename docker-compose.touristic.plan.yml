@@ -1,7 +1,17 @@
+version: '3.9'
+
 services:
 
-	vass-touristic-plans-api:
-		image: jaefallac/tourismplan:latest
-		container_name: vass-touristic-plans-api
-		env_file:
-			- 
+ instance-pgsql:
+  image: postgres:latest
+  
+
+ touristic-plans-api:
+  image: jaefallac/tourismplan:latest
+  container_name: touristic-plans-api
+  env_file:
+   - service.env
+  ports:
+   - 8080:80
+  networks:
+   - vass-agency
