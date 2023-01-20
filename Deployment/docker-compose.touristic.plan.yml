@@ -4,6 +4,8 @@ services:
  instance-pgsql:
   container_name: 'instance-pgsql'
   build: ../Database/
+  env_file:
+   - database.env
   ports: 
    - "5432:5432"
   networks:
@@ -23,6 +25,7 @@ services:
   image: jaefallac/tourismplan:latest
   container_name: 'touristic-plans-api'
   env_file:
+   - database.env
    - service.env
   ports:
    - "8080:80"
