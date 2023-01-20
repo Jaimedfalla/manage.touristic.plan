@@ -6,7 +6,7 @@
 - POSTGRES_PASSWORD
 
 2. Create a service.file in same folder: Deployment with de variable
-- CONNECTIONSTRINGS__PSQ_CONNECTION = CONNECTIONSTRINGS__PSQ_CONNECTION=User ID =${POSTGRES_USER};Password=${POSTGRES_PASSWORD};Server=instance-pgsql;Port=5432;Database=travelagency;Integrated Security=true;Pooling=true;
+- CONNECTIONSTRINGS__PSQ_CONNECTION=User ID =${POSTGRES_USER};Password=${POSTGRES_PASSWORD};Server=instance-pgsql;Port=5432;Database=travelagency;Integrated Security=true;Pooling=true;
 
 3. After, Create pgadmin.env inside Deployment folder with following environment variables
 
